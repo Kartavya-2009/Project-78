@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Family Book Project</title>
+    </head>
+    <body style="text-align: center;">
+        <h1>My Family Book</h1>
+        <img src="https://clipground.com/images/a-big-family-clipart-7.png" style="width: 30%;" id="family_member_image">
+        <h4 id="family_member_name"></h4>
+        <button onclick="update();">Next</button>
+        <script>
+            var images = ["https://clipground.com/images/a-big-family-clipart-7.png","https://clipground.com/images/black-grandfather-clipart-2.jpg",
+            "https://www.pngkit.com/png/detail/220-2201098_grandma-clipart-png-grandmother-clipart.png",
+            "https://www.theholidayspot.com/fathersday/clip_art/images/girl_-father.gif","https://clipartmag.com/images/cartoon-mom-clipart-12.jpg",
+            "https://www.clipartkey.com/mpngs/m/26-268437_family-clipart-only-child-only-father-clipart.png"];
+
+            var names = ["Family","Charanjeet Kathpal","Pushpa Kathpal","Mohit Kathpal","Minni Kathpal","Kartavya Kathpal"];
+
+            var i = 0;
+            function update()
+            {
+                i++;
+                var number_of_family_member_in_array = 5;
+                if(i > number_of_family_member_in_array)
+                {
+                    i = 0;
+                }
+                var updatedImage = images[i];
+                var updatedName = names[i];
+                document.getElementById("family_member_image").src = updatedImage;
+                document.getElementById("family_member_name").innerHTML = updatedName;
+            }
+            </script>
+            </body>
+</html>
+            
